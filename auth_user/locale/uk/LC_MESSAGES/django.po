@@ -1,0 +1,188 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-09-24 15:35+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: templates/registration/activate.html:5
+msgid "Активація відмінена!."
+msgstr ""
+
+#: templates/registration/activation_email.html:6
+msgid "реєстрація"
+msgstr ""
+
+#: templates/registration/activation_email.html:11
+msgid ""
+"Вашу адресу було використано для реєстрації на  сайті kvitky.pp.ua Якщо ви "
+"цього не робили, проігноруйте цей лист. Якщо ви реєструвалися там - "
+"перейдіть за посиланням нижче для активації профілю! Термін дії посилання - "
+"24 години!"
+msgstr ""
+
+#: templates/registration/activation_email.html:14
+msgid ""
+"\n"
+"    \n"
+"    "
+msgstr ""
+
+#: templates/registration/activation_email.html:25
+#, python-format
+msgid ""
+"\n"
+"    Sincerely,\n"
+"    %(site_name)s Management\n"
+"    "
+msgstr ""
+
+#: templates/registration/confirm_email.html:4
+msgid "підтвердження пошти"
+msgstr ""
+
+#: templates/registration/confirm_email.html:7
+msgid ""
+"На адресу  електроної пошти, яку  ви  вказали, прийшов  лист. Будь - ласка, "
+"перейдіть за  посиланням в  листі та залогуйтесь створеними імям користувача "
+"та паролем"
+msgstr ""
+
+#: templates/registration/login.html:7
+msgid "Квітка"
+msgstr ""
+
+#: templates/registration/login.html:9
+msgid "Про квіти"
+msgstr ""
+
+#: templates/registration/login.html:19
+msgid "Вхід"
+msgstr ""
+
+#: templates/registration/login.html:22
+msgid "Логін"
+msgstr ""
+
+#: templates/registration/login.html:28
+msgid "Пароль"
+msgstr ""
+
+#: templates/registration/login.html:33
+msgid "Ввійти"
+msgstr ""
+
+#: templates/registration/profile.html:12
+msgid "Електрона пошта"
+msgstr ""
+
+#: templates/registration/profile.html:18
+msgid "Імя користувача"
+msgstr ""
+
+#: templates/registration/profile.html:24
+msgid "приєднався"
+msgstr ""
+
+#: templates/registration/profile.html:30 templates/user_one_profile.html:22
+msgid "імя"
+msgstr ""
+
+#: templates/registration/profile.html:36 templates/user_one_profile.html:26
+#: templates/users_list.html:22
+msgid "прізвище"
+msgstr ""
+
+#: templates/registration/profile.html:41
+msgid "мова"
+msgstr ""
+
+#: templates/registration/registration_form.html:3
+msgid "Форма реєстрації"
+msgstr ""
+
+#: templates/registration/registration_form.html:4
+msgid "Реєстрація"
+msgstr ""
+
+#: templates/registration/registration_form.html:7
+msgid "Будь - ласка, виправте помилки нижче."
+msgstr ""
+
+#: templates/registration/registration_form.html:18
+msgid "Ваше імя користувача (лише латинські літери)"
+msgstr ""
+
+#: templates/registration/registration_form.html:24
+msgid "Ваш електрона пошта"
+msgstr ""
+
+#: templates/registration/registration_form.html:30
+msgid "пароль"
+msgstr ""
+
+#: templates/registration/registration_form.html:36
+msgid "повторити пароль"
+msgstr ""
+
+#: templates/registration/registration_form.html:41
+msgid "Зареєструватися"
+msgstr ""
+
+#: templates/user_one_profile.html:10
+msgid "електрона адреса"
+msgstr ""
+
+#: templates/user_one_profile.html:14
+msgid "імя користувача"
+msgstr ""
+
+#: templates/user_one_profile.html:18
+msgid "зареєструвався"
+msgstr ""
+
+#: templates/users_list.html:4
+msgid "квіти"
+msgstr ""
+
+#: templates/users_list.html:5
+msgid "Список  користувачів"
+msgstr ""
+
+#: templates/users_list.html:19
+msgid "нікнейм"
+msgstr ""
+
+#: views.py:56
+msgid "імя є обовязковим."
+msgstr ""
+
+#: views.py:62
+msgid "пароль є обовязковим."
+msgstr ""
+
+#: views.py:84 views.py:127
+msgid "користувач успішно відредагований"
+msgstr ""
+
+#: views.py:91 views.py:134
+msgid "редагування користувача відмінено"
+msgstr ""
+
+#: views.py:118
+msgid "мова є обовязковою"
+msgstr ""

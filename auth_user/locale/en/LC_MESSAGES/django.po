@@ -1,0 +1,191 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-09-24 15:35+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: templates/registration/activate.html:5
+msgid "Активація відмінена!."
+msgstr ""
+
+#: templates/registration/activation_email.html:6
+msgid "реєстрація"
+msgstr ""
+
+#: templates/registration/activation_email.html:11
+msgid ""
+"Вашу адресу було використано для реєстрації на  сайті kvitky.pp.ua Якщо ви "
+"цього не робили, проігноруйте цей лист. Якщо ви реєструвалися там - "
+"перейдіть за посиланням нижче для активації профілю! Термін дії посилання - "
+"24 години!"
+msgstr ""
+"Your address was used to register on kvitky.pp.ua If you did not do this, "
+"ignore this email. If you are registered there - follow the link below to "
+"activate the profile! Validity of the link is 24 hours!"
+
+#: templates/registration/activation_email.html:14
+msgid ""
+"\n"
+"    \n"
+"    "
+msgstr ""
+
+#: templates/registration/activation_email.html:25
+#, python-format
+msgid ""
+"\n"
+"    Sincerely,\n"
+"    %(site_name)s Management\n"
+"    "
+msgstr ""
+
+#: templates/registration/confirm_email.html:4
+msgid "підтвердження пошти"
+msgstr "confirmation mail"
+
+#: templates/registration/confirm_email.html:7
+msgid ""
+"На адресу  електроної пошти, яку  ви  вказали, прийшов  лист. Будь - ласка, "
+"перейдіть за  посиланням в  листі та залогуйтесь створеними імям користувача "
+"та паролем"
+msgstr ""
+"To the email address you provided, there was a letter. Please go to the link "
+"in the letter and fill in the user name and password you created"
+
+#: templates/registration/login.html:7
+msgid "Квітка"
+msgstr "Flower"
+
+#: templates/registration/login.html:9
+msgid "Про квіти"
+msgstr "About flowers"
+
+#: templates/registration/login.html:19
+msgid "Вхід"
+msgstr "Login"
+
+#: templates/registration/login.html:22
+msgid "Логін"
+msgstr "Login"
+
+#: templates/registration/login.html:28
+msgid "Пароль"
+msgstr "password"
+
+#: templates/registration/login.html:33
+msgid "Ввійти"
+msgstr "Login"
+
+#: templates/registration/profile.html:12
+msgid "Електрона пошта"
+msgstr "email"
+
+#: templates/registration/profile.html:18
+msgid "Імя користувача"
+msgstr "username"
+
+#: templates/registration/profile.html:24
+msgid "приєднався"
+msgstr "joined"
+
+#: templates/registration/profile.html:30 templates/user_one_profile.html:22
+msgid "імя"
+msgstr "name"
+
+#: templates/registration/profile.html:36 templates/user_one_profile.html:26
+#: templates/users_list.html:22
+msgid "прізвище"
+msgstr "surname"
+
+#: templates/registration/profile.html:41
+msgid "мова"
+msgstr "language"
+
+#: templates/registration/registration_form.html:3
+msgid "Форма реєстрації"
+msgstr "Registration form"
+
+#: templates/registration/registration_form.html:4
+msgid "Реєстрація"
+msgstr "Registration"
+
+#: templates/registration/registration_form.html:7
+msgid "Будь - ласка, виправте помилки нижче."
+msgstr "Please correct the errors below"
+
+#: templates/registration/registration_form.html:18
+msgid "Ваше імя користувача (лише латинські літери)"
+msgstr "Your username (Latin only)"
+
+#: templates/registration/registration_form.html:24
+msgid "Ваш електрона пошта"
+msgstr "Your email"
+
+#: templates/registration/registration_form.html:30
+msgid "пароль"
+msgstr "password"
+
+#: templates/registration/registration_form.html:36
+msgid "повторити пароль"
+msgstr "repeat password"
+
+#: templates/registration/registration_form.html:41
+msgid "Зареєструватися"
+msgstr "Sign up"
+
+#: templates/user_one_profile.html:10
+msgid "електрона адреса"
+msgstr "email"
+
+#: templates/user_one_profile.html:14
+msgid "імя користувача"
+msgstr "username"
+
+#: templates/user_one_profile.html:18
+msgid "зареєструвався"
+msgstr "Sign up"
+
+#: templates/users_list.html:4
+msgid "квіти"
+msgstr "flowers"
+
+#: templates/users_list.html:5
+msgid "Список  користувачів"
+msgstr "List of users"
+
+#: templates/users_list.html:19
+msgid "нікнейм"
+msgstr "nickname"
+
+#: views.py:56
+msgid "імя є обовязковим."
+msgstr "the name is obligatory"
+
+#: views.py:62
+msgid "пароль є обовязковим."
+msgstr "the password is obligatory"
+
+#: views.py:84 views.py:127
+msgid "користувач успішно відредагований"
+msgstr "user has been successfully edited"
+
+#: views.py:91 views.py:134
+msgid "редагування користувача відмінено"
+msgstr "user edit has been canceled"
+
+#: views.py:118
+msgid "мова є обовязковою"
+msgstr "language is obligatory"

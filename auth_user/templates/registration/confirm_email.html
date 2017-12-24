@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static from staticfiles %}
+{% block meta_title %}{% trans "підтвердження пошти" %}{% endblock meta_title %}
+{% block content %}
+<div>
+<h3 class="col-xs-10 col-xs-offset-1">{% trans "На адресу  електроної пошти, яку  ви  вказали, прийшов  лист. Будь - ласка, перейдіть за  посиланням в  листі та залогуйтесь створеними імям користувача та паролем" %}!</h3>
+</div>
+{% endblock content %}

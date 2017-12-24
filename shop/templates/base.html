@@ -1,0 +1,116 @@
+{% load i18n %}
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html lang='uk'>
+  <head>
+  	<meta charset='UTF-8'/>
+    <title>{% trans "Квітка" %}</title>
+  	<meta name='description'
+      value={% trans "Про квіти" %} />
+      <!-- Include Styles -->
+      <link rel='stylesheet' href='https://cdn.jsdelivr.net/bootstrap/3.3.0/css/bootstrap.min.css'>
+      <link rel="stylesheet" href='{% static "css/main.css" %}'>
+  </head>
+  <body class="body">
+
+
+<!-- start page -->
+<div class="celing">
+  <div class="row">
+
+
+   <div class="col-md-3" id="lang-selector">
+      <button class='initLangSelector' value='uk'>
+      <img src="http://kvitky.pp.ua/static/img/ukraine.png"/></button> 
+      <button class='initLangSelector' value='en'>
+      <img src="http://kvitky.pp.ua/static/img/united-states.png"/></button> 
+   </div>
+
+
+   <div class='col-md-3 registration'>
+     {% if user.is_authenticated %}
+        <a href="{% url 'users_one' user.id %}">{{ user.username }}</a>
+        |
+        <a href='{% url 'users:auth_logout' %}'>{% trans "Вийти" %}</a>
+     {% else %}
+        <a href='{% url 'users:auth_login' %}'>{% trans "Ввійти" %}</a>
+        |
+        <a href='{% url "users:registration_register" %}'>{% trans "Зареєструватися" %}</a>
+     {% endif %}
+   </div>
+
+    <div class='col-md-3 form-search'>
+     <form action="{% url "search" %}" method="post">
+        {% csrf_token %}
+      <input type="text" name="search" class="input-medium search-query">
+      <button type="submit" class="btn">{% trans "Знайти" %}</button>
+      <span class="help-block">{{ errors.title }}</span>
+     </form>
+    </div>
+
+  </div>
+</div>
+<!-->
+
+  	<!-- Logo -->
+  	<div class="row">
+    <div class='col-xs-6 col-xs-offset-3'>
+      <h1 id='title'>{% trans "Купівля насіння та саджанців квітів" %}</h1>
+
+    </div>
+    </div>
+
+    <!-- Start SubHeader -->
+    <div class='row sub-header'>
+
+      <div class='col-xs-11'>
+       <ul class='nav nav-pills main_menu' role='tablist'>
+        <li role='presentation' {% if request.path == '/' %}class="active"{% endif %}><a href='{% url 'main' %}'>{% trans "Головна" %}</a></li>
+        <li role='presentation'><a href=''>{% trans "Про мене" %}</a></li>
+        <li role='presentation'><a href=''>{% trans "Контакти" %}</a></li>
+        <li role='presentation' {% if '/basket' in request.path %}class="active"{% endif %}><a href='{% url 'basket' %}'>{%trans "Кошик" %}</a></li> 
+        <li role='presentation' {% if '/samovlenya' in request.path %}class="active"{% endif %}><a href='{% url 'orders' %}'>{% trans "Замовлення" %}</a></li> <li role='presentation' {% if '/users_list' in request.path %}class="active"{% endif %}><a href='{% url 'users_list' %}'>{% trans "Список користувачів" %}</a></li> 
+        <li role="presentation" {% if '/logs' in request.path %}class="active"{% endif %}><a href="{% url "logs" %}">{% trans "Журнал змін" %}</a></li>        
+       </ul>
+      </div>
+
+      <div class="col-xs-1 cart_indicator">
+      {% if cart|length > 0 %}
+          <a href='{% url 'basket' %}'><img 
+src="http://kvitky.pp.ua/static/img/cart.png"/></a> {{ cart|length }}
+      {% else %}
+          <a><img src="http://kvitky.pp.ua/static/img/cart-c.png"/></a>
+      {% endif %}
+      </div>
+
+   </div>
+    <!-- End SubHeader -->
+
+       {% block content %}{% endblock content %}
+
+
+  </div>
+
+
+
+  	<!-- Start Footer -->
+    <div class="row" id="footer">
+      <div class="col-xs-12">
+        <footer>&copy; 2017 Oleh Smolynets</footer>
+      </div>
+    </div>
+
+
+
+  </body>
+
+
+  	<!-- Javascripts Section -->
+  	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js'></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.1/jquery.form.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+  	<script src='https://cdn.jsdelivr.net/bootstrap/3.3.0/js/bootstrap.min.js'></script>
+    <script src="{% static "js/main.js" %}"></script>
+  </body>
+</html>

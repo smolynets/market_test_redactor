@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static from staticfiles %}
+
+
+
+{% block content %}
+    {% if request.GET.status_message %}
+          <div class="alert alert-warning col-xs-6 col-xs-offset-3" role="alert">
+             <div class="col-xs-6 col-xs-offset-3">{{ request.GET.status_message }}
+             </div>
+          </div>
+    {% endif %}
+
+    <div class="row col-xs-2 col-xs-offset-5 price_sorting">
+       {% with order_by=request.GET.order_by reverse=request.GET.reverse %}
+           <a href="{% url "main" %}?order_by=price{% if order_by == 'price' and reverse != '1' %};reverse=1{% endif %}">
+            {% trans "Сортувати по ціні" %}
+           {% if order_by == 'price' and reverse != '1' %}&uarr;
+           {% elif order_by == 'price' and reverse == '1' %}&darr;
+           {% endif %}
+           </a>
+       {% endwith %}
+    </div>
+
+    {% if perms.auth.add_user %}
+    <a class='btn btn-primary btn1' href='{% url "flower_add" %}'>{% trans "додати квітку" %}</a>
+    {% endif %}
+
+    <div class='row col-xs-11 col-xs-offset-1 content'>
+
+        {% for fl in flowers %}
+          
+    <div class="col-xs-3 lot">
+            <div class="thumbnail">
+            <img  src="{{ fl.photo_main.url }}"/>
+            <div class="title_lot"><h4>{{ fl.title }}</h4></div>
+            <div class="caption">
+            <div id='price_buy'>{% trans "ціна" %} 
+                  {{ fl.price }} {% trans "грн" %}</div>
+            {% if fl in cart_main %}
+              <div><a href='{% url 'CartRemove_main_page' fl.id %}'
+                class="btn btn-primary from_basket"><font color="black">{% trans "З кошика" %}</a>
+              </div>
+              {% else %}
+              <div><a href='{% url 'CartAdd' fl.id %}' 
+                class="btn btn-primary to_basket">{% trans "в кошик" %}</a>
+              </div>
+              {% endif %}
+            <div id='reade_more'><a href="{% url "one_flower" fl.id %}">Читати більше...</a></div>
+            </div>
+            </div>
+        </div>
+        
+        {% endfor %}
+    </div>
+
+
+    {% if flowers.has_other_pages %}
+    <div class='row col-xs-10 col-xs-offset-1'>
+    <nav>
+      <ul class="pagination">
+        <li><a href="{% url "main" %}?page=1&amp;order_by={{ order_by }}&amp;reverse={{ reverse }}">&laquo;</a></li>
+
+       {% for p in flowers.paginator.page_range %}
+        <li {% if flowers.number == p %}class="active"{% endif %}>
+           <a href="{% url "main" %}?page={{ p }}&amp;order_by={{ order_by }}&amp;reverse={{ reverse }}">{{ p }}</a>
+        </li>
+        {% endfor %}
+
+        <li><a href="{% url "main" %}?page={{ flowers.paginator.num_pages }}&amp;order_by={{ order_by }}&amp;reverse={{ reverse }}">&raquo;</a></li>
+      </ul>
+    </nav>
+    </div>
+    {% endif %}
+
+  {% endblock content %}
+
+  
+
+
+  	

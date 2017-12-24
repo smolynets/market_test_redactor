@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static from staticfiles %}
+{% block meta_title %}{% trans "квіти" %}{% endblock meta_title %}
+{% block title %}{% trans "Список  користувачів" %}{% endblock title %}
+{% block content %}
+{% if user.is_authenticated %}
+
+<!-- Start Students Listing -->
+<table class="table">
+
+
+<thead>
+<tr>
+<th>
+#
+</th>
+<th>
+{% trans "нікнейм" %}
+</th>
+<th>
+{% trans "прізвище" %}
+</th>
+<th>
+id
+</th>
+<th>
+
+</th>
+</tr>
+</thead>
+
+
+<tbody>
+{% for use in users %}
+<tr>
+<td>{{ forloop.counter }}</td>
+<td><a href="{% url 'users_one' use.id %}">{{ use.username }}</td>
+<td>{{ use.last_name }}</td>
+<td>{{ use.id }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+{% endif %}
+<!-- End Students Listing -->
+
+{% endblock content %}

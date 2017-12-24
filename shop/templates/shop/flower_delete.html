@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static from staticfiles %}
+{% block meta_title %}{% trans "Видалення квітки" %}{% endblock meta_title %}
+{% block title %}{% trans "Видалити квітку" %}{% endblock title %}
+{% block content %}
+<div id='del_confirm'>
+<form action="" method="post">
+{% csrf_token %}
+<p>{% trans "Ви дійсно хочете видалити квітку" %} "{{ object }}"?</p>
+<input type="submit" value="{% trans "Так" %}" name="delete_button"
+class="btn btn-danger" />
+<input type="submit" value="{% trans "Ні" %}" name="no_delete_button"
+class="btn btn-danger" /><br /><br />
+</form>
+</div>
+{% endblock content %}

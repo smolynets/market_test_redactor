@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load wysiwyg %}
+{% load i18n %}
+{% load static from staticfiles %}
+{% block title %}{% trans "Редагування квітки" %}{% endblock title %}
+{% block status_message %}
+{% if errors %}
+<div class="alert alert-warning" role="alert">
+{% trans "Будь-ласка, виправте наступні помилки" %}
+</div>
+{% endif %}
+{% endblock status_message %}
+{% block content %}
+<div class="add_form">
+
+
+
+
+<div class="row custom_form">
+<form action="{% url "flower_edit" pk %}" method="post"
+enctype="multipart/form-data" role="form" class="form-horizontal col-xs-6 col-xs-offset-3">
+{% csrf_token %}
+
+<div class="form-group {% if errors.title %}has-error{% endif%}">
+  <label for="title" class="col-sm-2 control-label">{% trans "Назва" %}*</label>
+  <div class="col-sm-10">
+    <input type="text" value="{{ flower.title }}"
+    name="title" id="title" class="form-control" />
+     <span class="help-block">{{ errors.title }}</span>
+  </div>
+</div>
+
+<div class="form-group {% if errors.price %}has-error{% endif%}">
+  <label for="price" class="col-sm-2 control-label">{% trans "Ціна" %}*({% trans "тільки цифри" %} !)</label>
+  <div class="col-sm-10">
+   <input type="text" value="{{ flower.price }}"
+    name="price" id="price" class="form-control" />
+  <span class="help-block">{{ errors.price }}</span>
+  </div>
+</div>
+
+{% wysiwyg_setup  %}
+<div class="form-group {% if errors.description %}has-error{% endif %}">
+    <label for="description" class="col-sm-2 control-label">{% trans "Опис" %}</label>
+    <div class="col-sm-10">
+      <textarea name="description" id="description" class="form-control">{{ flower.description }}</textarea>
+      {% wysiwyg_editor "description" %}
+      <span class="help-block">{{ errors.description }}</span>
+    </div>
+  </div>
+
+
+<div class="form-group {% if errors.photo_main %}has-error{% endif %}">
+    <label for="photo"class="col-sm-2 control-label">{% trans "Фото головне" %}</label>
+    <div class="col-sm-10">
+
+      <p class="file-upload">{% trans "Поточна фотографія" %}: <a href="/media/{{flower.photo_main}}">{{ flower.photo_main }}</a></span><br />
+
+
+      <input type="file" value="" name="photo_main" id="photo_main"
+             class="form-control" />
+      <span class="help-block">{{ errors.photo_main }}</span>
+    </div>
+  </div>
+
+
+
+<div class="form-group {% if errors.photo_big %}has-error{% endif %}">
+    <label for="photo_big"class="col-sm-2 control-label">{% trans "Фото" %} 2</label>
+    <div class="col-sm-10">
+
+    <p class="file-upload">{% trans "Поточна фотографія" %}: <a href="/media/{{flower.photo_main}}">{{ flower.photo_main }}</a></span><br />
+    
+      <input type="file" value="" name="photo_big" id="photo_big"
+             class="form-control" />
+      <span class="help-block">{{ errors.photo_big }}</span>
+    </div>
+  </div>
+
+<div class="form-group">
+  <label class="col-sm-2 control-label"></label>
+  <div class="col-sm-10">
+  <input type="submit" value="{% trans "Зберегти" %}" name="add_button"
+    class="btn btn-primary" />
+  <button type="submit" name="cancel_button"
+    class="btn btn-link">{% trans "Скасувати" %}</button>
+  </div>
+  </div>
+  <div class="row col-xs-8 col-xs-offset-2">
+    <p>{% trans "Поля, позначені  зірочкою,  обовязкові  для  заповнення" %}!</p>
+  </div>
+</form>
+</div>
+
+
+
+  
+</div>
+{% endblock content %}

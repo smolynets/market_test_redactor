@@ -1,0 +1,266 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-09 08:34+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: templates/base.html:8
+msgid "Квітка"
+msgstr "Flower"
+
+#: templates/base.html:10
+msgid "Про квіти"
+msgstr "About flowers"
+
+#: templates/base.html:33
+msgid "Вийти"
+msgstr "Logout"
+
+#: templates/base.html:35
+msgid "Ввійти"
+msgstr "Login"
+
+#: templates/base.html:37
+msgid "Зареєструватися"
+msgstr "Registration"
+
+#: templates/base.html:45
+msgid "Знайти"
+msgstr "Search"
+
+#: templates/base.html:57 templates/shop/one_order.html:5
+#: templates/shop/orders.html:7
+msgid "Купівля насіння та саджанців квітів"
+msgstr "Purchase of seed and flower seedlings"
+
+#: templates/base.html:68
+msgid "Головна"
+msgstr "main"
+
+#: templates/base.html:69
+msgid "Про мене"
+msgstr "About me"
+
+#: templates/base.html:70
+msgid "Контакти"
+msgstr "Contacts"
+
+#: templates/base.html:71
+msgid "Кошик"
+msgstr "Cart"
+
+#: templates/base.html:72
+msgid "Замовлення"
+msgstr "Orders"
+
+#: templates/base.html:72
+msgid "Список користувачів"
+msgstr "List of users"
+
+#: templates/base.html:73
+msgid "Журнал змін"
+msgstr "Logs journal"
+
+#: templates/shop/basket.html:10
+msgid "В кошику"
+msgstr "In cart"
+
+#: templates/shop/basket.html:17 templates/shop/flower_add.html:24
+#: templates/shop/flower_edit.html:24
+msgid "Назва"
+msgstr "Name"
+
+#: templates/shop/basket.html:18
+msgid "Кількість"
+msgstr "Number"
+
+#: templates/shop/basket.html:19 templates/shop/flower_add.html:33
+#: templates/shop/flower_edit.html:33
+msgid "Ціна"
+msgstr "Price"
+
+#: templates/shop/basket.html:20
+msgid "Повна ціна"
+msgstr "full price"
+
+#: templates/shop/basket.html:34
+msgid "Обновити"
+msgstr "Refresh"
+
+#: templates/shop/basket.html:37 templates/shop/basket.html:38
+#: templates/shop/basket.html:45 templates/shop/main.html:40
+msgid "грн"
+msgstr "grn"
+
+#: templates/shop/basket.html:40
+msgid "Видалити"
+msgstr "delete"
+
+#: templates/shop/basket.html:45
+msgid "Загальна сума"
+msgstr "Total price"
+
+#: templates/shop/basket.html:54
+msgid "повернутись"
+msgstr "come back"
+
+#: templates/shop/basket.html:55
+msgid "замовити"
+msgstr "order"
+
+#: templates/shop/basket.html:61
+msgid "Ви ще не вибрали жодного товару"
+msgstr "You have not selected any products yet"
+
+#: templates/shop/flower_add.html:4
+msgid "Додавання квітки"
+msgstr "Addinf of flower"
+
+#: templates/shop/flower_add.html:8 templates/shop/flower_edit.html:8
+msgid "Будь-ласка, виправте наступні помилки"
+msgstr "Please correct the following errors"
+
+#: templates/shop/flower_add.html:33 templates/shop/flower_edit.html:33
+msgid "тільки цифри"
+msgstr "only digits"
+
+#: templates/shop/flower_add.html:42 templates/shop/flower_edit.html:42
+msgid "Опис"
+msgstr "description"
+
+#: templates/shop/flower_add.html:50 templates/shop/flower_edit.html:51
+msgid "Фото головне"
+msgstr "main photo"
+
+#: templates/shop/flower_add.html:60 templates/shop/flower_edit.html:66
+msgid "Фото"
+msgstr "photo"
+
+#: templates/shop/flower_add.html:71
+msgid "Додати"
+msgstr "Add"
+
+#: templates/shop/flower_add.html:74 templates/shop/flower_edit.html:80
+msgid "Скасувати"
+msgstr "Cansel"
+
+#: templates/shop/flower_add.html:82 templates/shop/flower_edit.html:89
+msgid "Поля, позначені  зірочкою,  обовязкові  для  заповнення"
+msgstr "Fields marked with an asterisk are required to be filled"
+
+#: templates/shop/flower_delete.html:4
+msgid "Видалення квітки"
+msgstr "Deleting of flower"
+
+#: templates/shop/flower_delete.html:5
+msgid "Видалити квітку"
+msgstr "Delete flower"
+
+#: templates/shop/flower_delete.html:10
+msgid "Ви дійсно хочете видалити квітку"
+msgstr "Do you really want to remove the flower"
+
+#: templates/shop/flower_delete.html:11
+msgid "Так"
+msgstr "Yes"
+
+#: templates/shop/flower_delete.html:13
+msgid "Ні"
+msgstr "Now"
+
+#: templates/shop/flower_edit.html:4
+msgid "Редагування квітки"
+msgstr "Editing of flower"
+
+#: templates/shop/flower_edit.html:54
+msgid "Поточна фотографія"
+msgstr "Current photo"
+
+#: templates/shop/flower_edit.html:77
+msgid "Зберегти"
+msgstr "Save"
+
+#: templates/shop/main.html:18
+msgid "Сортувати по ціні"
+msgstr "sort by price"
+
+#: templates/shop/main.html:26
+msgid "додати квітку"
+msgstr "Add flower"
+
+#: templates/shop/main.html:39
+msgid "ціна"
+msgstr "price"
+
+#: templates/shop/main.html:44
+msgid "З кошика"
+msgstr "from cart"
+
+#: templates/shop/main.html:48
+msgid "в кошик"
+msgstr "to cart"
+
+#: templates/shop/main.html:52
+msgid "Читати більше..."
+msgstr "read more..."
+
+#: templates/shop/one_flower.html:28
+msgid "редагувати"
+msgstr "edit"
+
+#: templates/shop/one_flower.html:29
+msgid "видалити"
+msgstr "delete"
+
+#: templates/shop/one_order.html:15 templates/shop/orders.html:21
+msgid "імя"
+msgstr "name"
+
+#: templates/shop/one_order.html:19 templates/shop/orders.html:24
+msgid "телефон"
+msgstr "phone number"
+
+#: templates/shop/one_order.html:23
+msgid "Додаткові нотатки"
+msgstr "Additional notes"
+
+#: templates/shop/ordering.html:7
+msgid "Заповніть форму"
+msgstr "Fill in the form"
+
+#: templates/shop/ordering.html:21
+msgid "номер телефону"
+msgstr "phone number"
+
+#: templates/shop/ordering.html:33
+msgid "Додаткові Нотатки"
+msgstr "Additional notes"
+
+#: templates/shop/ordering.html:41
+msgid "Зробити замовлення"
+msgstr "make a order"
+
+#: templates/shop/ordering.html:43
+msgid "на головну"
+msgstr "to main page"
+
+#: templates/shop/orders.html:27
+msgid "сума"
+msgstr "suma"
+
+#: templates/shop/orders.html:30
+msgid "додаткові нотатки"
+msgstr "Additional notes"
