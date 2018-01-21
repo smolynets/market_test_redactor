@@ -8,6 +8,7 @@ from .forms import CartAddProductForm
 from .models import Order, OrderItem
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
+from .tasks import OrderCreated
 
 
 
@@ -104,6 +105,7 @@ def OrderCreate(request):
                                          price=item['price'],
                                          quantity=item['quantity'])
           cart.clear()
+          OrderCreated.delay(order.id)
           return HttpResponseRedirect( u'%s?status_message=Замовлення успішно збережено!' 
               % reverse('main'))
         else:

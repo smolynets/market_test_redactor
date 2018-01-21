@@ -13,7 +13,7 @@
     {% for fl in flower %}
     <div>
       <div class="title_lot_one"><h1>{{ fl.title }}</h1></div>
-      <p id="text_about">{{ fl.description }}</p>
+      <p id="text_about">{{ fl.description|safe }}</p>
           <center>
       <img src='{{ fl.photo_main.url }}' width='350' height='250' class="big_photo img-thumbnail" id='big_photo'>
           </center>
